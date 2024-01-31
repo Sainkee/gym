@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+    <script
+      src="https://kit.fontawesome.com/36a6b3689e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section
+      id="header"
+      class="h-[100vh] bg-cover text-white bg-no-repeat bg-[url('photo-1526506118085-60ce8714f8c5.avif')]"
+    >
+      <span
+        id="blackOverlay"
+        class="w-full h-full absolute opacity-75 bg-black"
+      ></span>
+      <nav class="navBar flex justify-between px-[100px] py-4 z-10 relative text-xl">
+        <div class="navLogo">
+          <a href="#header">THE NOVEMBER ROOM</a>
+        </div>
+        <div class="hamBurger md:hidden">
+          <div class="bar1 h-[4px] mt-[4px] bg-white w-6"></div>
+          <div class="bar2 h-[4px] mt-[4px] bg-white w-6"></div>
+          <div class="bar3 h-[4px] mt-[4px] bg-white w-6"></div>
+        </div>
+        <ul
+          class="md:flex-row md:flex hidden gap-4 flex-col absolute left-4 top-12 md:static list"
+        >
+          <li>
+            <a href="">
+              <i class="fa-brands fa-facebook" style="color: #f6911e"></i>
+              <span class="2xl:hidden">Share</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="fa-brands fa-twitter" style="color: #f6911e"></i>
+              <span class="2xl:hidden">Tweet</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="fa-brands fa-linkedin" style="color: #f6911e"></i>
+              <span class="2xl:hidden">Post</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class=" relative flex flex-col justify-center items-center text-center h-full  lg:w-[80%] mx-auto gap-5" >
+        <h1 class="font-bold text-5xl">FEEL THE <span class="text-orange-500">POWER</span></h1>
+        <p class="text-base w-[60%]">Welcome to The November Room. We are a fitness and training center that focuses on pushing you to your absolute limit.  Download our complete brochure to get started today!</p>
+        <button class=" rounded-md px-5 py-3 border-2 border-orange-500 hover:bg-orange-500">DownLoad Brochure</button>
+      </div>
+    </section>
+  </body>
+  <script>
+    let list = document.querySelector(".list");
+    document.querySelector(".hamBurger").addEventListener("click", () => {
+      if (list.style.display === "flex") {
+        list.style.display = "none";
+      } else {
+        list.style.display = "flex";
+      }
+    });
+  </script>
+</html>
