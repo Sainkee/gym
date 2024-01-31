@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="output.css" />
+  
     <script
       src="https://kit.fontawesome.com/36a6b3689e.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <section
@@ -19,7 +21,9 @@
         id="blackOverlay"
         class="w-full h-full absolute opacity-75 bg-black"
       ></span>
-      <nav class="navBar flex justify-between px-[100px] py-4 z-10 relative text-xl">
+      <nav
+        class="navBar flex justify-between px-5 md:px-[100px] py-4 z-10 relative text-xl"
+      >
         <div class="navLogo">
           <a href="#header">THE NOVEMBER ROOM</a>
         </div>
@@ -29,7 +33,7 @@
           <div class="bar3 h-[4px] mt-[4px] bg-white w-6"></div>
         </div>
         <ul
-          class="md:flex-row md:flex hidden gap-4 flex-col absolute left-4 top-12 md:static list"
+          class="md:flex-row md:flex hidden gap-4 flex-col absolute px-5 md:left-[100px] top-12 md:static list"
         >
           <li>
             <a href="">
@@ -51,14 +55,63 @@
           </li>
         </ul>
       </nav>
-      <div class=" relative flex flex-col justify-center items-center text-center h-full  lg:w-[80%] mx-auto gap-5" >
-        <h1 class="font-bold text-5xl">FEEL THE <span class="text-orange-500">POWER</span></h1>
-        <p class="text-base w-[60%]">Welcome to The November Room. We are a fitness and training center that focuses on pushing you to your absolute limit.  Download our complete brochure to get started today!</p>
-        <button class=" rounded-md px-5 py-3 border-2 border-orange-500 hover:bg-orange-500">DownLoad Brochure</button>
+      <div
+        class="relative flex flex-col justify-center items-center text-center h-full lg:w-[80%] mx-auto gap-5"
+      >
+        <h1 class="font-bold text-5xl">
+          FEEL THE <span class="text-orange-500">POWER</span>
+        </h1>
+        <p class="text-base w-[60%]">
+          Welcome to The November Room. We are a fitness and training center
+          that focuses on pushing you to your absolute limit. Download our
+          complete brochure to get started today!
+        </p>
+        <button
+          class="rounded-md px-5 py-3 border-2 border-orange-500 hover:bg-orange-500"
+        >
+          DownLoad Brochure
+        </button>
       </div>
     </section>
+    <section class="bg-black text-white" id="about">
+      <div class="flex flex-col sm:flex-row items-center px-4 py-20 mx-auto justify-center gap-10">
+        <div data-aos="flip-left" data-aos-duration="1000" class="lg:px-20  min-w-[50%]">
+          <img
+            src="photo-1550345332-09e3ac987658.avif"
+            alt=""
+            class=" object-cover  lg:p-10 rounded-md"
+          />
+        </div>
+        <div  data-aos="fade-left" data-aos-duration="2000" class="aboutData flex flex-col  md:px-5 mx-auto">
+          <span class="text-orange-500">About our gym</span>
+          <h2 class="text-4xl pt-4">SAFE BODY BUILDING</h2>
+          <p class="text-white text-lg md:w-[60%] py-4">
+            The extension comes with three pre-built pages to help you get
+            started faster. You can change the text and images, and you're good
+            to go.
+          </p>
+          <span class="flex gap-3 items-center py-4 text-lg">
+            <i class="fa-solid fa-dumbbell text-3xl" style="color: #f97316"></i>
+            <span>latest & greatest gym equipment</span>
+          </span>
+          <span class="flex gap-3 items-center py-4 text-lg">
+            <i class="fa-solid fa-chart-pie text-3xl" style="color: #f97316"></i>
+            <span>5-inch, quality foam floor padding</span>
+          </span>
+          <span class="flex gap-3 items-center py-4 text-lg">
+            <i class="fa-solid fa-people-group text-3xl" style="color: #f97316"></i>
+            <span>3 professioonal trainers</span>
+          </span>
+        </div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
   <script>
+    AOS.init();
+  </script>
+  <script>
+    
     let list = document.querySelector(".list");
     document.querySelector(".hamBurger").addEventListener("click", () => {
       if (list.style.display === "flex") {
